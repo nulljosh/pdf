@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PDF Screener -- Native macOS PDF Form Filler</title>
+  <meta name="description" content="Native macOS app that extracts form fields from PDFs, presents them in an editable form, and writes answers back.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<button class="theme-toggle" aria-label="Toggle theme">
+  <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+
+<main id="main">
+
+<!-- Hero -->
+<header class="hero container">
+  <span class="version animate__animated animate__fadeIn">v0.1.0</span>
+  <h1 class="animate__animated animate__fadeInUp">PDF Screener</h1>
+  <p class="animate__animated animate__fadeInUp animate__delay-1s">Native macOS app that extracts form fields from PDFs, presents them in an editable form, and writes answers back. Built with SwiftUI and PDFKit. Zero dependencies.</p>
+  <ul class="links animate__animated animate__fadeInUp animate__delay-1s">
+    <li><a class="pill" href="https://github.com/nulljosh/pdf">GitHub</a></li>
+  </ul>
+</header>
+
+<!-- Features -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>Features</h2>
+    <ul class="items">
+      <li>
+        <h3>Drag and Drop</h3>
+        <p>Open any PDF by dragging it in or pressing Cmd+O. Instant field detection.</p>
+      </li>
+      <li>
+        <h3>Field Extraction</h3>
+        <p>Extracts AcroForm widgets: text fields, checkboxes, radio buttons, dropdowns.</p>
+      </li>
+      <li>
+        <h3>Side-by-Side</h3>
+        <p>Edit fields on the left while viewing the live PDF preview on the right.</p>
+      </li>
+      <li>
+        <h3>Fill and Save</h3>
+        <p>Write answers back to the PDF and save as a new filled copy.</p>
+      </li>
+      <li>
+        <h3>JSON Export</h3>
+        <p>Export and import answers as JSON sidecar files for reuse across forms.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Architecture -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>Architecture</h2>
+    <div class="arch-block">
+<pre>PDFScreener/
+  <span class="file">PDFScreenerApp.swift</span>    <span class="desc">App entry, window config</span>
+  <span class="file">AppState.swift</span>          <span class="desc">Observable state: PDF doc, fields, load/save</span>
+  <span class="file">ContentView.swift</span>       <span class="desc">HSplitView: field panel + PDF preview</span>
+  <span class="file">FieldRow.swift</span>          <span class="desc">Per-field editor (adapts to type)</span>
+  <span class="file">PDFViewWrapper.swift</span>    <span class="desc">NSViewRepresentable for PDFView</span>
+  <span class="file">PDFExtractor.swift</span>      <span class="desc">AcroForm widget field extraction</span>
+  <span class="file">PDFFiller.swift</span>         <span class="desc">Write answers back to annotations</span>
+  <span class="file">Models.swift</span>            <span class="desc">FormField, FieldType</span>
+
+PDFScreenerTests/
+  <span class="file">AppStateTests.swift</span>     <span class="desc">State management tests</span>
+  <span class="file">ExtractorTests.swift</span>    <span class="desc">AcroForm extraction tests</span>
+  <span class="file">FillerTests.swift</span>       <span class="desc">PDF annotation writing tests</span>
+  <span class="file">ModelsTests.swift</span>       <span class="desc">Data model tests</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Roadmap -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>Roadmap</h2>
+    <ul class="roadmap">
+      <li class="current">v0.1.0 -- Core App <span>(current)</span></li>
+      <li>v0.2.0 -- AI Auto-Fill <span>(codex-powered, review mode)</span></li>
+      <li>v0.3.0 -- Smart Text Detection <span>(non-AcroForm PDFs)</span></li>
+      <li>v0.4.0 -- Batch and Profiles <span>(folder processing, templates)</span></li>
+      <li>v0.5.0 -- Polish <span>(keyboard nav, undo/redo, search)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>Tech Stack</h2>
+    <ul class="tech-list">
+      <li class="pill">SwiftUI</li>
+      <li class="pill">PDFKit</li>
+      <li class="pill">macOS 14+</li>
+      <li class="pill">xcodegen</li>
+      <li class="pill">Zero Dependencies</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>MIT 2026 Joshua Trommel</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:700,once:true,easing:'ease-out-cubic',offset:40});
+
+(function(){
+  var t=document.querySelector('.theme-toggle');
+  var meta=document.querySelector('meta[name="theme-color"]');
+  function set(theme){
+    document.documentElement.setAttribute('data-theme',theme);
+    localStorage.setItem('theme',theme);
+    if(meta)meta.setAttribute('content',theme==='dark'?'#09090b':'#ffffff');
+  }
+  var saved=localStorage.getItem('theme');
+  if(saved){set(saved)}
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches){set('dark')}
+  t.addEventListener('click',function(){
+    var current=document.documentElement.getAttribute('data-theme');
+    set(current==='dark'?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400">
+  <rect width="700" height="400" fill="white" style="fill:white"/>
+  <text x="350" y="30" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="16" font-weight="600" style="fill:#333;font-family:-apple-system,Helvetica;font-size:16px;font-weight:600">PDF Screener Architecture</text>
+
+  <!-- App Entry -->
+  <rect x="280" y="50" width="140" height="40" rx="8" fill="#f0f4ff" stroke="#4a9eff" stroke-width="1.5" style="fill:#f0f4ff;stroke:#4a9eff;stroke-width:1.5"/>
+  <text x="350" y="75" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="12" style="fill:#333;font-family:-apple-system,Helvetica;font-size:12px">PDFScreenerApp</text>
+
+  <!-- AppState -->
+  <rect x="280" y="120" width="140" height="40" rx="8" fill="#fff4e6" stroke="#ff9f43" stroke-width="1.5" style="fill:#fff4e6;stroke:#ff9f43;stroke-width:1.5"/>
+  <text x="350" y="145" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="12" style="fill:#333;font-family:-apple-system,Helvetica;font-size:12px">AppState</text>
+  <line x1="350" y1="90" x2="350" y2="120" stroke="#999" stroke-width="1" style="stroke:#999;stroke-width:1"/>
+
+  <!-- ContentView -->
+  <rect x="280" y="200" width="140" height="40" rx="8" fill="#f0f4ff" stroke="#4a9eff" stroke-width="1.5" style="fill:#f0f4ff;stroke:#4a9eff;stroke-width:1.5"/>
+  <text x="350" y="225" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="12" style="fill:#333;font-family:-apple-system,Helvetica;font-size:12px">ContentView</text>
+  <line x1="350" y1="160" x2="350" y2="200" stroke="#999" stroke-width="1" style="stroke:#999;stroke-width:1"/>
+
+  <!-- FieldRow -->
+  <rect x="100" y="290" width="120" height="40" rx="8" fill="#e8f8e8" stroke="#4aff88" stroke-width="1.5" style="fill:#e8f8e8;stroke:#4aff88;stroke-width:1.5"/>
+  <text x="160" y="315" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="12" style="fill:#333;font-family:-apple-system,Helvetica;font-size:12px">FieldRow</text>
+  <line x1="310" y1="240" x2="160" y2="290" stroke="#999" stroke-width="1" style="stroke:#999;stroke-width:1"/>
+
+  <!-- PDFViewWrapper -->
+  <rect x="280" y="290" width="140" height="40" rx="8" fill="#e8f8e8" stroke="#4aff88" stroke-width="1.5" style="fill:#e8f8e8;stroke:#4aff88;stroke-width:1.5"/>
+  <text x="350" y="315" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="12" style="fill:#333;font-family:-apple-system,Helvetica;font-size:12px">PDFViewWrapper</text>
+  <line x1="350" y1="240" x2="350" y2="290" stroke="#999" stroke-width="1" style="stroke:#999;stroke-width:1"/>
+
+  <!-- PDFExtractor -->
+  <rect x="500" y="120" width="140" height="40" rx="8" fill="#fce8e8" stroke="#ff6b6b" stroke-width="1.5" style="fill:#fce8e8;stroke:#ff6b6b;stroke-width:1.5"/>
+  <text x="570" y="145" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="12" style="fill:#333;font-family:-apple-system,Helvetica;font-size:12px">PDFExtractor</text>
+  <line x1="420" y1="140" x2="500" y2="140" stroke="#999" stroke-width="1" style="stroke:#999;stroke-width:1"/>
+
+  <!-- PDFFiller -->
+  <rect x="500" y="190" width="140" height="40" rx="8" fill="#fce8e8" stroke="#ff6b6b" stroke-width="1.5" style="fill:#fce8e8;stroke:#ff6b6b;stroke-width:1.5"/>
+  <text x="570" y="215" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="12" style="fill:#333;font-family:-apple-system,Helvetica;font-size:12px">PDFFiller</text>
+  <line x1="420" y1="145" x2="500" y2="210" stroke="#999" stroke-width="1" style="stroke:#999;stroke-width:1"/>
+
+  <!-- Models -->
+  <rect x="60" y="120" width="120" height="40" rx="8" fill="#f4e8ff" stroke="#a855f7" stroke-width="1.5" style="fill:#f4e8ff;stroke:#a855f7;stroke-width:1.5"/>
+  <text x="120" y="145" text-anchor="middle" fill="#333" font-family="-apple-system, Helvetica" font-size="12" style="fill:#333;font-family:-apple-system,Helvetica;font-size:12px">Models</text>
+  <line x1="180" y1="140" x2="280" y2="140" stroke="#999" stroke-width="1" stroke-dasharray="4" style="stroke:#999;stroke-width:1;stroke-dasharray:4"/>
+
+  <!-- PDFKit label -->
+  <rect x="500" y="290" width="140" height="40" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="1" style="fill:#f5f5f5;stroke:#999;stroke-width:1"/>
+  <text x="570" y="315" text-anchor="middle" fill="#666" font-family="-apple-system, Helvetica" font-size="12" style="fill:#666;font-family:-apple-system,Helvetica;font-size:12px">PDFKit</text>
+  <line x1="570" y1="230" x2="570" y2="290" stroke="#999" stroke-width="1" stroke-dasharray="4" style="stroke:#999;stroke-width:1;stroke-dasharray:4"/>
+  <line x1="350" y1="330" x2="500" y2="310" stroke="#999" stroke-width="1" stroke-dasharray="4" style="stroke:#999;stroke-width:1;stroke-dasharray:4"/>
+
+  <!-- Legend -->
+  <rect x="30" y="360" width="12" height="12" rx="3" fill="#f0f4ff" stroke="#4a9eff" stroke-width="1" style="fill:#f0f4ff;stroke:#4a9eff;stroke-width:1"/>
+  <text x="48" y="371" fill="#666" font-family="-apple-system, Helvetica" font-size="10" style="fill:#666;font-family:-apple-system,Helvetica;font-size:10px">View</text>
+  <rect x="100" y="360" width="12" height="12" rx="3" fill="#fff4e6" stroke="#ff9f43" stroke-width="1" style="fill:#fff4e6;stroke:#ff9f43;stroke-width:1"/>
+  <text x="118" y="371" fill="#666" font-family="-apple-system, Helvetica" font-size="10" style="fill:#666;font-family:-apple-system,Helvetica;font-size:10px">State</text>
+  <rect x="170" y="360" width="12" height="12" rx="3" fill="#fce8e8" stroke="#ff6b6b" stroke-width="1" style="fill:#fce8e8;stroke:#ff6b6b;stroke-width:1"/>
+  <text x="188" y="371" fill="#666" font-family="-apple-system, Helvetica" font-size="10" style="fill:#666;font-family:-apple-system,Helvetica;font-size:10px">PDF Logic</text>
+  <rect x="260" y="360" width="12" height="12" rx="3" fill="#f4e8ff" stroke="#a855f7" stroke-width="1" style="fill:#f4e8ff;stroke:#a855f7;stroke-width:1"/>
+  <text x="278" y="371" fill="#666" font-family="-apple-system, Helvetica" font-size="10" style="fill:#666;font-family:-apple-system,Helvetica;font-size:10px">Data</text>
+</svg>

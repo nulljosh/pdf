@@ -1,0 +1,40 @@
+name: PDFScreener
+options:
+  bundleIdPrefix: com.joshua
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16.0"
+  minimumXcodeGenVersion: "2.38"
+settings:
+  SWIFT_VERSION: "5.9"
+  MACOSX_DEPLOYMENT_TARGET: "14.0"
+targets:
+  PDFScreener:
+    type: application
+    platform: macOS
+    sources:
+      - PDFScreener
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.joshua.pdf-screener
+      PRODUCT_NAME: PDF Screener
+      INFOPLIST_FILE: PDFScreener/Info.plist
+      MARKETING_VERSION: "0.1.0"
+      CURRENT_PROJECT_VERSION: 1
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      CODE_SIGN_STYLE: Automatic
+      ENABLE_HARDENED_RUNTIME: YES
+      COMBINE_HIDPI_IMAGES: YES
+      APP_SANDBOX: NO
+  PDFScreenerTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - PDFScreenerTests
+    dependencies:
+      - target: PDFScreener
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.joshua.pdf-screener-tests
+      CODE_SIGN_STYLE: Automatic
+      GENERATE_INFOPLIST_FILE: YES
+      TEST_HOST: "$(BUILT_PRODUCTS_DIR)/PDF Screener.app/Contents/MacOS/PDF Screener"
+      BUNDLE_LOADER: "$(TEST_HOST)"
